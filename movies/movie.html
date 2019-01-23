@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="MediaElch">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  </head>
+  <body>
+  
+	<div class="container">
+		<div class="card">
+			<div class="card-header">
+				
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-auto">
+						<img src="{{ IMAGE.POSTER[200,400] }}" />
+					</div>
+					<div class="col">
+						<h3>{{ MOVIE.TITLE }}</h3>
+						<h6>{{ MOVIE.YEAR }}</h6>
+						
+						<div class="row">
+							<div class="col">
+								<b>Genres</b>
+								{{ BEGIN_BLOCK_GENRES }}
+								<span class="badge badge-secondary">{{ GENRE.NAME }}</span>
+								{{ END_BLOCK_GENRES }}
+							</div>
+							<div class="col">
+								<b>Bewertung</b>
+								<span class="badge badge-warning">{{ MOVIE.RATING }}</span>
+							</div>
+							<div class="col">
+								<b>Dauer</b>
+								117min
+							</div>
+						</div>
+						<a href="{{ MOVIE.TRAILER }}">{{ MOVIE.TRAILER }}</a>						
+						<p>{{ MOVIE.PLOT }}</p>
+					</div>
+				</div>
+				<div class="row" style="padding-top:10px">
+				<h4>
+					<span class="badge badge-dark">{{ FILEINFO.WIDTH }}x{{ FILEINFO.HEIGHT }}</span>
+					<span class="badge badge-dark">{{ FILEINFO.CODEC }}</span>
+					<span class="badge badge-primary">{{ FILEINFO.AUDIO.CODEC }}</span>
+					<span class="badge badge-primary">{{ FILEINFO.AUDIO.CHANNELS }}</span>
+					<span class="badge badge-primary">{{ FILEINFO.AUDIO.LANGUAGE }}</span>
+				</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+  
+<div style="display:none" >	 
+  <h1>{{ MOVIE.TITLE }}</h1>
+  
+		Title: {{ MOVIE.TITLE }}<br />
+		Year: {{ MOVIE.YEAR }}<br />
+		Original Title: {{ MOVIE.ORIGINAL_TITLE }}<br />
+		Set: {{ MOVIE.SET }}<br />
+		Genres: {{ MOVIE.GENRES }}<br />
+		Tags: {{ MOVIE.TAGS }}<br />
+		Plot: {{ MOVIE.PLOT }}<br />
+		Plot simple: {{ MOVIE.PLOT_SIMPLE }}<br />
+		Tagline: {{ MOVIE.TAGLINE }}<br />
+		Writer: {{ MOVIE.WRITER }}<br />
+		Director: {{ MOVIE.DIRECTOR }}<br />
+		Trailer: {{ MOVIE.TRAILER }}<br />
+		Rating: {{ MOVIE.RATING }}<br />
+		Votes: {{ MOVIE.VOTES }}<br />
+		Runtime: {{ MOVIE.RUNTIME }}<br />
+		Playcount: {{ MOVIE.PLAY_COUNT }}<br />
+		Last played: {{ MOVIE.LAST_PLAYED }}<br />
+		Countries: {{ MOVIE.COUNTRIES }}<br />
+
+		{{ BEGIN_BLOCK_TAGS }}
+			Tag: {{ TAG.NAME }}<br />
+		{{ END_BLOCK_TAGS }}
+
+		{{ BEGIN_BLOCK_GENRES }}
+			Genre: {{ GENRE.NAME }}<br />
+		{{ END_BLOCK_GENRES }}
+		
+		{{ BEGIN_BLOCK_COUNTRIES }}
+			Country: {{ COUNTRY.NAME }}<br />
+		{{ END_BLOCK_COUNTRIES }}
+
+		{{ BEGIN_BLOCK_STUDIOS }}
+			Studio: {{ STUDIO.NAME }}<br />
+		{{ END_BLOCK_STUDIOS }}
+
+		{{ BEGIN_BLOCK_ACTORS }}
+			Actor: {{ ACTOR.NAME }}: {{ ACTOR.ROLE }}<br />
+		{{ END_BLOCK_ACTORS }}
+
+		Video width: {{ FILEINFO.WIDTH }}<br />
+		Video height: {{ FILEINFO.HEIGHT }}<br />
+		Video aspect ratio: {{ FILEINFO.ASPECT }}<br />
+		Video codec: {{ FILEINFO.CODEC }}<br />
+		Video duration in seconds: {{ FILEINFO.DURATION }}<br />
+		Audio codec(s) (joined by |): {{ FILEINFO.AUDIO.CODEC }}<br />
+		Audio channels(s) (joined by |): {{ FILEINFO.AUDIO.CHANNELS }}<br />
+		Audio languages(s) (joined by |): {{ FILEINFO.AUDIO.LANGUAGE }}<br />
+
+		<img src="{{ IMAGE.POSTER[200,400] }}" />
+		<img src="{{ IMAGE.FANART[200,400] }}" />
+		<img src="{{ IMAGE.LOGO[200,400] }}" />
+		<img src="{{ IMAGE.CLEARART[200,400] }}" />
+		<img src="{{ IMAGE.DISC[200,200] }}" />
+		</div>
+  </body>
+</html>

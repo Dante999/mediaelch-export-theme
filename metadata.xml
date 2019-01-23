@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata>
+	<name>Bootstrap Theme</name>
+	<identifier>dante999_theme</identifier>
+	<description>This theme should not be used for exporting. It's basically for developers to show off all available options.</description>
+	<description lang="de">Dieses Theme sollte nicht für einen Export benutzt werden. Es ist in erster Linie für Entwickler gedacht und stellt alle zur Verfügung stehenden Optionen dar.</description>
+	<author>Daniel Kabel</author>
+	<version>1.1</version>
+	<supports>
+		<section>movies</section>
+	</supports>
+</metadata>
