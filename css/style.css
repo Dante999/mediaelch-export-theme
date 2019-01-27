@@ -1,17 +1,25 @@
-.movie-container {
+.overview-movie-container {
   display: inline-block;
   width: 200px;
-  height: 400px;
+  height: 420px;
   margin:5px;
   overflow: hidden;
   
 }
 
-.movie-cover {  
+.overview-movie-cover {  
   width: 200px;
   height: 300px;
 }
 
-.movie-plot {
+.overview-movie-text {
   margin-left: 5px;
+}
+
+.overview-movie-title {
+  font-weight: bold;
+}
+
+.overview-movie-rating {
+  display:none;
 }

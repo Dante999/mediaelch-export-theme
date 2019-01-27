@@ -15,14 +15,15 @@
 
         {{ BEGIN_BLOCK_MOVIE }}
         
-            <div class="border rounded movie-container d-inline-block" >
-                <img src="{{ IMAGE.POSTER[200,400] }}" class="movie-cover"/>
-                <p class="movie-plot">
-                    <a href="{{ MOVIE.LINK }}">
-                        <b>{{ MOVIE.TITLE }}</b><br>
-                        {{ MOVIE.YEAR }}
-                    </a>
-                </p>
+            <div class="overview-movie-container border rounded d-inline-block" >
+                <a href="{{ MOVIE.LINK }}">
+                    <img class="overview-movie-cover" src="{{ IMAGE.POSTER[200,400] }}"/>
+                    <p>
+                        <div class="overview-movie-title">{{ MOVIE.TITLE }}</div>
+                        <div class="overview-movie-year">{{ MOVIE.YEAR }}</div>
+                        <div class="overview-movie-rating">{{ MOVIE.RATING }}</div>
+                    </p>
+                  </a>
             </div>
 
         {{ END_BLOCK_MOVIE }}
