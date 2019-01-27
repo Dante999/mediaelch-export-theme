@@ -1,0 +1,17 @@
+.movie-container {
+  display: inline-block;
+  width: 200px;
+  height: 400px;
+  margin:5px;
+  overflow: hidden;
+  
+}
+
+.movie-cover {  
+  width: 200px;
+  height: 300px;
+}
+
+.movie-plot {
+  margin-left: 5px;
+}

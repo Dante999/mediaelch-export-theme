@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Movies</title>
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	
-	
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="MediaElch">
-  </head>
-  <body>
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Titel</th>
-      <th scope="col">Jahr</th>
-      <th scope="col">Rate</th>
-      <th scope="col">Video</th>
-    </tr>
-  </thead>
-  <tbody>
-  
-	{{ BEGIN_BLOCK_MOVIE }}
-    <tr>	
-      <td><a href="{{ MOVIE.LINK }}">{{ MOVIE.TITLE }}</a></td>
-      <td>{{ MOVIE.YEAR }}</td>
-      <td><span class="badge badge-warning">{{ MOVIE.RATING }}</span></td>
-      <td><span class="badge badge-secondary">{{ FILEINFO.WIDTH }}p</span></td>
-    </tr>
-	{{ END_BLOCK_MOVIE }}
-  </tbody>
-  </table>
-  
- 
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <title>Movies</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="MediaElch">
+    </head>
+    <body>
+        
+        <div class="container">      
+
+        {{ BEGIN_BLOCK_MOVIE }}
+        
+            <div class="border rounded movie-container d-inline-block" >
+                <img src="{{ IMAGE.POSTER[200,400] }}" class="movie-cover"/>
+                <p class="movie-plot">
+                    <a href="{{ MOVIE.LINK }}">
+                        <b>{{ MOVIE.TITLE }}</b><br>
+                        {{ MOVIE.YEAR }}
+                    </a>
+                </p>
+            </div>
+
+        {{ END_BLOCK_MOVIE }}
+
+        
+        </div> <!-- end container -->
+
+
+    </body>
 </html>
